@@ -3,10 +3,7 @@ package br.com.zup.edu.aluno;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.Column;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Past;
-import javax.validation.constraints.PastOrPresent;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 public class AlunoRequest {
@@ -20,6 +17,7 @@ public class AlunoRequest {
     @Size(max = 6)
     private String matricula;
 
+    @NotNull
     @PastOrPresent
     private LocalDate data;
 
